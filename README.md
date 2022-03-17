@@ -1,13 +1,8 @@
 # ImGui_single-board_OpenGL 
 
-OpenGL for small single-board computers using the AMAZING Dear ImGui C++ library
+OpenGL for small single-board computers using the [Dear ImGui C++ library](https://github.com/ocornut/imgui)
 
 
-## Raspberry Pi
-
-First make sure you have the GCC compiler. If it is not, install it:
-
-```Bash
-sudo apt-get install gcc
-```
-
+Make sure you have the GCC compiler installed. The `glfw` library is also needed. 
+It is definitelly way easier if you have the Qt Creators IDE installed, if so just run the CMakeLists.txt 
+inside the Qt creators and that it! (Qt creators is not needed, but it does have all the development dependancies needed)

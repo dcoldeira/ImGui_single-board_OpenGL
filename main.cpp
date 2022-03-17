@@ -62,7 +62,7 @@ out vec4 fragColor;
 
 void main() {
 
-    fragColor=vec4(1.0, color, 1.0 - color,1.0);
+    fragColor=vec4(3.0, color, 2.0 - color,1.0);
 }
 
 )";
@@ -138,9 +138,6 @@ int main() {
 
         // Clear the draw buffer
         glClear(GL_COLOR_BUFFER_BIT);
-
-        // Show awesome ImGui demo widget
-        if (demo) ImGui::ShowDemoWindow(&demo);
 
         // Allow user to update uniforms
         ImGui::SliderInt("Instances", &uniforms.n_instances, 6, 360);
