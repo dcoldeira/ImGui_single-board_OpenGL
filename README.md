@@ -1,40 +1,32 @@
-# ImGui_single-board_OpenGL (on linux)
-
-OpenGL for small single-board computers using the [Dear ImGui C++ library](https://github.com/ocornut/imgui)
+# [Dear ImGui C++ library](https://github.com/ocornut/imgui) for single-board with OpenGL for host development on Debian
 
 
-Make sure you have the GCC compiler installed. 
+Make sure you have the GCC compiler and OpenGL installed. 
 
 The `glfw` library is also needed so if you haven't installed it yet:
 
 ```Bash
 sudo apt-get update
 ```
-Install the libraries 
-```Bash
-sudo apt-get install cmake pkg-config
-sudo apt-get install mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev
-sudo apt-get install libglew-dev libglfw3-dev libglm-dev
-sudo apt-get install libao-dev libmpg123-dev
-```
-
-Now let's install it in the lib folder (or wherever you like..)
+Install the libraries (note these are for 64-bit)
 
 ```Bash
-cd /usr/local/lib/
+sudo apt-get install mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev
 ```
-Clone the repo and cd into it
+
+Then instal GLFW 3
+```Bash
+sudo apt-get install libglfw3
+sudo apt-get install libglfw3-dev
+```
+Additionally if you want to install [GLAD](https://github.com/Dav1dde/glad)
 
 ```Bash
-git clone https://github.com/glfw/glfw.git
-cd glfw
-```
-Preper the installer and run
-
-```Bash
-sudo cmake .
-sudo make
-sudo make install
+git clone https://github.com/Dav1dde/glad.git
+cd glad
+cmake ./
+make
+sudo cp -a include /usr/local/
 ```
 
-On linux it is definitelly way easier if you have the Qt Creators IDE installed, if so just run the CMakeLists.txt inside the Qt creators and that it! (Qt creators is not needed, but it does have all the development dependancies needed)
+On linux it is definitelly way easier if you have the Qt Creators IDE installed, if so, then just run the CMakeLists.txt inside the Qt creators and that it! (Qt creators is not needed, but it does have all the development dependancies needed)
